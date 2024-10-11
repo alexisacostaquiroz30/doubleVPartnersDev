@@ -1,0 +1,59 @@
+﻿DoubleV Partners
+
+DoubleV Partners es un proyecto desarrollado en .NET... que le permite a usted buscar productos, categorías y listas de deseos.
+La idea es que los usuarios puedan interactuar fácilmente con los productos, agregar artículos a su lista de deseos y organizarlos como deseen. 
+
+Las tecnologías utilizadas en este proyecto son las siguientes:
+
+💻 Lenguaje: C#
+
+🛠 Framework: .NET 6
+
+🗄 ORM: Entity Framework Core
+
+💾 Base de Datos: SQL Server
+
+🔐 Autenticación: JSON Web Tokens
+
+
+📚 Bibliotecas:
+
+🔑 BCrypt.Net: Seguridad de contraseña mediante encriptación
+
+📡 Microsoft.AspNetCore.Mvc: Crear la API.
+
+
+📂 Estructura del Proyecto
+El proyecto tiene una estructura de varias capas separadas... cada una de ellas con un propósito claro:
+
+📝 Modelos: Son las clases que representan las entidades de la base de datos.
+
+Category: Categorías de productos
+Product: Productos
+User: Usuarios en el sistema
+WishlistItem: Productos en la lista de deseos de un usuario
+Login: Modelo para autenticación
+DB context: DoubleVpartnersContext: Proyecto donde se configura la conexión y se mapean las entidades para la base de datos
+
+📊 Repositorios: Contienen la lógica de acceso a datos.
+
+ICategoryRepository, IProductRepository, IUserRepository, IWishlistRepository: Interfaz que define las operaciones de acceso a datos.
+Implementaciones: CategoryRepository, ProductRepository, UserRepository, WishlistRepository.
+
+⚙️ Servicios: Contienen la lógica de negocio que consume los repositorios.
+
+AuthService: Maneja los datos de autenticación y construcción de token JWT.
+CategoryService, ProductService, UserService, WishlistService: Cada uno consume la interfaz del repositorio para realizar las operaciones necesarias.
+
+🚀 Características del Proyecto Implementadas
+Las funcionalidades ofrecidas incluyen:
+
+✔️ Listar categorías y productos
+
+✔️ Registro y autenticación de usuarios
+
+✔️ Guardar productos favoritos de los usuarios en una lista de deseos
+
+✔️ Manejo de seguridad en contraseñas encriptadas
+
+✔️ Autenticación de usuarios mediante JSON Web Tokens
